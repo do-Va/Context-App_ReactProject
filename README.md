@@ -1,3 +1,3 @@
 # Context App
 
-![gif](_images/contextApp.gif)
+![gif](_images/ContextApp.gif)

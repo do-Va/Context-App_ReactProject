@@ -8,7 +8,7 @@ export default class PageContent extends Component {
     const { isDarkMode } = this.context;
     const styles = {
       background: isDarkMode ? '#000' : '#fff',
-      height: '100vh',
+      minHeight: '100vh',
       width: '100%',
     };
 

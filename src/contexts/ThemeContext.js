@@ -7,7 +7,7 @@ export class ThemeProvider extends Component {
     super(props);
 
     this.state = {
-      idDarkMode: true,
+      isDarkMode: true,
     };
   }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 import {
   AppBar,
@@ -9,17 +10,20 @@ import {
   Switch,
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { Search } from '@material-ui/icons';
+import { ChangeHistory, Search } from '@material-ui/icons';
 
 import styles from './styles/NavBarStyles';
 
 class Navbar extends Component {
+  static contextType = ThemeContext;
+
   render() {
+    const { isDarkMode } = this.context;
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="primary">
+        <AppBar position="static" color={isDarkMode ? 'default' : 'primary'}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit">
               <span>🏳‍🌈</span>
